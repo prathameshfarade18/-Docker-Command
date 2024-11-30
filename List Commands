@@ -1,0 +1,113 @@
+List Running Containers
+(docker ps)
+
+List All Containers (including stopped)
+(docker ps -a)
+
+Run a New Container
+(docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+   Example to run an interactive container:
+   docker run -it ubuntu /bin/bash
+
+Stop a Running Container
+(docker stop CONTAINER_ID/NAME)
+
+Start a Stopped Container
+(docker start CONTAINER_ID/NAME)
+
+Restart a Container
+(docker restart CONTAINER_ID/NAME)
+
+Remove a Container
+(docker rm CONTAINER_ID/NAME)
+
+Remove All Stopped Containers
+(docker container prune)
+
+Execute a Command in a Running Container
+(docker exec -it CONTAINER_ID/NAME COMMAND)
+
+Example to open a bash shell inside a running container:
+(docker exec -it container_name /bin/bash)
+
+View Container Logs
+(docker logs CONTAINER_ID/NAME)
+
+View Running Container Processes
+(docker top CONTAINER_ID/NAME)
+
+Show Container Stats
+(docker stats)
+
+2.Docker CLI Commands for Images
+
+List Docker Images
+(docker images)
+
+Pull an Image from Docker Hub
+(docker pull IMAGE_NAME)
+
+Build an Image from a Dockerfile
+(docker build -t IMAGE_NAME)
+
+Remove an Image
+(docker rmi IMAGE_ID/NAME)
+
+Remove All Unused Images
+(docker image prune)
+
+3. Docker CLI Commands for Volumes
+
+List Volumes
+(docker volume ls)
+
+Create a Volume
+(docker volume create VOLUME_NAME)
+
+Remove a Volume
+(docker volume rm VOLUME_NAME)
+
+Remove All Unused Volumes
+(docker volume prune)
+
+4. Docker CLI Commands for Networks
+
+List Networks
+(docker network ls)
+
+Create a Network
+(docker network create NETWORK_NAME)
+
+Remove a Network
+(docker network rm NETWORK_NAME)
+
+5. Docker CLI Commands for Docker Compose
+
+Start Docker Compose
+(docker-compose up)
+
+Stop Docker Compose
+(docker-compose down)
+
+Run in Detached Mode
+(docker-compose up -d)
+
+View Logs for Docker Compose
+(docker-compose logs)
+
+List Services in Docker Compose
+(docker-compose ps)
+
+Build the Services
+(docker-compose build)
+
+6. Docker System Commands
+
+Check Docker Version
+(docker --version)
+
+Show Docker Info
+(docker info)
+
+Clean Up Unused Docker Resources (containers, networks, images, volumes)
+(docker system prune)
